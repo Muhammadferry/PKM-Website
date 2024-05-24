@@ -19,4 +19,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.next-btn').addEventListener('click', nextCard);
     document.querySelector('.prev-btn').addEventListener('click', prevCard);
+
+    showCard(index);
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const artikelButton = document.querySelector('.artikel-button');
+    const konsultasiButton = document.querySelector('.konsultasi-button');
+    const addFileSection = document.querySelector('#addFile');
+    const konsultasiSection = document.querySelector('#konsultasi');
+
+    // Fungsi untuk menampilkan bagian tertentu dan menyembunyikan yang lain
+    function toggleSections(showSection, hideSection) {
+        showSection.style.display = 'block';
+        hideSection.style.display = 'none';
+    }
+
+    artikelButton.addEventListener('click', function() {
+        toggleSections(addFileSection, konsultasiSection);
+    });
+
+    konsultasiButton.addEventListener('click', function() {
+        toggleSections(konsultasiSection, addFileSection);
+    });
+});
+

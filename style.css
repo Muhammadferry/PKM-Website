@@ -5,28 +5,33 @@
 body {
     overflow-x:hidden;
     font-family: Arial, sans-serif;
+   
   }
   .logo {
     background-color: transparent;
     color: white;
-    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; 
+    padding-bottom: -150px;
+  }
+ 
+  .img-logo {
+    width: 150px;
     
   }
-  .logo img {
-    width: 8%;
-  }
+
   .logo ul {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
     position: relative;
     left: -20px;
-    bottom: 10px;
+    bottom: 20px;
     column-gap: 30px;
-    z-index: 3;
+    z-index: 5;
+    padding-bottom: -200px;
   }
 
 
@@ -48,8 +53,12 @@ body {
     opacity: 0.5;
     border: none;
     display: none;
-    
   }
+
+  .menu-toggle {
+    display: none; /* Anda bisa menyesuaikan ini untuk navigasi mobile */
+  }
+
 
   /*home*/
 
@@ -64,6 +73,7 @@ body {
     font-style: normal;
     position: relative;
     top: 100px;
+    left: 50px;
     font-size: 30px;
   }
 
@@ -75,40 +85,15 @@ body {
 
   .home-image img{
     width: 200%;
+    height: 90%;
     position: relative;
     right: 630px;
-    bottom: 118px;
+    bottom: 18px;
   }
 
   /*kalkulasi*/
 
-  .wrapper {
-    position: relative;
-    bottom: 160px;
-    right: 20px;
-    width: 110%;
-  }
-
-  .custom-shape-divider-top-1714545735 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-
-  .custom-shape-divider-top-1714545735 svg {
-    position: relative;
-    display: block;
-    width: calc(128% + 1.3px);
-    height: 110px;
-    transform: rotateY(180deg);
-  }
-
-  .custom-shape-divider-top-1714545735 .shape-fill {
-    fill: #EFDCAC;
-  }
+ 
 
   .head {
     justify-content: center;
@@ -122,9 +107,18 @@ body {
   }
 
 /*kalkulasi*/
+
+  .content-form {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    position: relative;
+    right: 600px;
+  }
+
   .container-form {
     position: relative;
-    right: 490px;
+    top: 80px;
     max-width: 100px; 
     margin: 0 auto; 
     padding: 20px;
@@ -134,19 +128,14 @@ body {
   }
 
   .kal-form {
-    border: 1px solid #606C38;
-    outline-style: solid;
-    outline-color: #606C38;
-    outline-width: thin;
-    border-style: solid;
+    border: none;
+    background-color: #f6f3f3 ;
     position: relative;
-    bottom: 100px;
-    left: 130px;
     display: flex;
     align-items: center;
     border-radius: 10px;
-    width: 800px;
-    height: 700px;
+    width: 600px;
+    height: 500px;
     border-width: 5px;
     border-radius: 49px;
     flex-direction: column;
@@ -157,27 +146,31 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 80px;
-    right: 170px;
+    top: 90px;
+    right: 200px;
   }
 
   .kal-form label {
     font-size: 16px; 
     color: #333; 
-    margin-bottom: 5px; 
+    position: relative;
+    top: 20px;
+    left: 80px;
+    margin-bottom: -20px; 
     padding: -50px;
-    margin-top: -15px;
+    margin-top: -25px;
   }
 
   .kal-form input[type="text"] {
     font-size: 14px; 
-    padding: 10px; 
+    padding: 5px; 
     margin-bottom: 15px; 
-    border: 3px solid #606C38; 
+    border: 3px solid #0000; 
     border-radius: 4px; 
+    background-color: #d1d1d1;
     position: relative;
-    left: 380px;
-    bottom: 50px;
+    right: -305px;
+    bottom: 25px;
   }
 
   .kal-form button {
@@ -191,11 +184,36 @@ body {
     position: relative;
     left: 160px;
     border: 4px #000000;
+    border: none;
   }
 
   .kal-form button:hover {
     background-color: #657b67; 
   }
+
+  .img-form {
+    width: 100px;
+    position: relative;
+    bottom: 90px;
+  }
+
+  .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #606C38;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    left: 190px;
+}
+.button-link:hover {
+    background-color: #4f4f4f;
+}
 
 
 /*edukasi*/
@@ -264,7 +282,7 @@ body {
   }
   .artikel {
     position: relative;
-    top: 80px; 
+    top: 180px; 
     gap: 100px; 
     display: flex;
     font-family: "Merriweather", serif;
@@ -287,9 +305,24 @@ body {
 
   .card {
     display: none;
+    opacity: 0.9;
     flex-shrink: 0; /* Mencegah kartu utama untuk menyusut */
     transition: transform 0.3s ease-in-out; /* Animasi perubahan posisi kartu */
     position: relative;
+  }
+
+  .card a button{
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    width: 200px;
+    border-radius: 30px;
+  }
+
+  .card a button:hover {
+    color: #000000;
   }
 
   .card.active {
@@ -297,14 +330,14 @@ body {
   }
 
   .card .card-content {
-    border: 2px solid #1e1e1e;
+    
     border-radius: 24px;
     width: 520px;
     height: 450px;
     color: #ffff;
     background-color: #BC6C25;
+
     position: relative;
-    
     bottom: 50px;
   }
 
@@ -346,6 +379,20 @@ body {
     background-color: #bcb5b5; /* Warna latar belakang tombol saat hover */
   }
 
+  .prev-btn {
+    position: relative;
+    right: 100px;
+    width: 80px;
+    height: 50px;
+  }
+
+  .next-btn {
+    position: relative;
+    left: 100px;
+    width: 80px;
+    height: 50px;
+  }
+
   /*addfile*/
   .form-container {
     width: 600px;
@@ -363,6 +410,7 @@ body {
     justify-content: space-between;
     position: relative;
     right: 85px;
+    
   }
 
   .form-section {
@@ -373,12 +421,18 @@ body {
   }
 
   .form-section button {
-    padding: 20px 70px;
+    padding: 10px 50px;
     font-size: 15px;
     background-color: #fff;
   }
 
-  .form-section button a {
+  .form-section button:hover{
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+  }
+
+  .form-section button  {
     color: #000000; /* Atur warna tautan */
     text-decoration: none
   }
@@ -392,7 +446,9 @@ body {
   }
   input[type="text"],
   input[type="email"],
-  input[type="file"] {
+  input[type="file"],
+  input[type="alamat"],
+  input[type="telepon"] {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -411,5 +467,374 @@ body {
   .submit-button:hover {
     background-color: #45a049;
   }
+
+  #konsultasi {
+    display: none;
+  }
+
+
+/*footer*/
+
+  /* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 50px 0;
+  text-align: start;
+  position: relative;
+  font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.footer h4 {
+  margin: 0 0 0 50px;
+  font-size: 24px;
+  text-transform: uppercase;
+  position: relative;
+  top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 100px;
+  top: 10px; 
+}
+
+.left-side{
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 150px;
+  bottom: 48px;
+  flex-direction: column;
+}
+
+.left-side h5 {
+  text-align: start;
+  position: relative;
+  right: 110px;
+}
+
+.left-side .ft-img {
+  height: 50px;
+  margin: 0 10px;
+}
+
+
+.footer-content .center-side {
+  position: relative;
+  bottom: 20px;
+  right: 100px;
+}
+
+.footer-content .right-side{
+  position: relative;
+  bottom: 40px;
+}
+
+.icon-side {
+  position: relative;
+  bottom: 63px;
+  left: 150px;
+}
+
+.icon-side i {
+  margin: 10px;
+  color: white;
+}
+
+.icon-side a {
+  text-decoration: none
+}
+
+.fa-brands fa-instagram{
+  width: 100px;
+}
+
+.bottom-side {
+  font-size: 10px;
+  opacity: 0.5;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+
+/*==========login=============*/
+
+/* Ganti dengan path gambar yang sesuai */
+.account-form {
+  background-color: #fff;
+  padding: 20px;
+  width: 500px;
+  margin: auto;
+  position: relative;
+  right: 400px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px auto;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #FFA500; /* Warna oranye */
+  color: white;
+  padding: 14px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.account-form {
+  position: relative;
+  left: 0px;
+  bottom: 60px;
+  right: 1000px
+}
+
+.account-form p {
+  text-align: center;
+  position: relative;
+  right: 100px;
+  color: #BC6C25;
+}
+
+.account-form h2 {
+  position: relative;
+  left: 50px;
+  font-size: 40px;
+  color: #BC6C25;
+}
+
+.account-form input {
+  border: solid #BC6C25;
+  border-radius: 30px;
+  width: 400px;
+  height: 50px;
+  position: relative;
+  right: 100px;
+}
+
+
+.account-form button {
+  border-radius: 10px;
+  width: 200px;
+  position: relative;
+  left: 50px;
+}
+
+.content-sigup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.side-form img{
+  width: 170%;
+  position: relative;
+  right: 380px;
+  top: 5px;
+}
+
+
+/*===============hasil kalkulasi================*/
+
+.form-hasil {
+  border: solid 2px #000000;
+  border-radius: 30px;
+  width: 1000px;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.data-hasil h1 {
+  text-align: center;
+}
+
+.data-hasil label {
+  padding-bottom: 5px;
+  position: relative;
+  left: 100px;
+}
+
+.data-hasil input {
+  margin-bottom: 30px;
+  width: 800px;
+}
+
+.text-hasil {
+  padding: 10px;
+  border: 2px solid #000; 
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 800px;
+  position: relative;
+  left: 90px;
+  margin-bottom: 50px;
+}
+
+.text-hasil h2 {
+  text-align: center;
+  color: #606C38;
+  font-size: 30px;
+  margin-top: -1;
+  margin-bottom: -1px;
+}
+
+.img-hasil {
+  display: block;
+  margin: 10px auto;
+}
+
+.text-hasil p{
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#hasil {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+/*=======================Page Artikel===================*/
+
+#main-artikel {
+  margin-bottom: 50px;
+}
+
+.page-artikel {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.head-artikel {
+  margin-bottom: 50px;
+}
+
+.head-artikel ul {
+  text-decoration: none;
+  display: flex;
+  color: #000;
+  cursor: pointer;
+  gap: 100px;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-artikel li {
+  list-style: none;
+  color: #000;
+  margin: 0px;
+}
+
+.head-artikel a {
+  text-decoration: none; 
+  color: #000; 
+  font-size: 18px;
+  font-weight: bold;
+}
+.head-artikel a:visited {
+  color: #000; 
+}
+.head-artikel a:hover {
+  color: #676565; 
+}
+
+.center-art {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px;
+}
+
+.main-art h2 {
+  position: relative;
+  left: 20px;
+  font-size: 20px;
+}
+
+.left-art {
+  font-size: 15px;
+  position: relative;
+  left: 20px;
+}
+
+.left-art li {
+  flex-direction: column;
+  gap: 100px;
+} 
+
+.img1-sideart {
+  margin-left: 40px;
+}
+
+.section1-title {
+  position: relative;
+  right: 40px;
+}
+
+.right1-art {
+ font-size: 15px;
+ width: 2500px;
+ display: grid;
+ column-gap: 50px;
+ position: relative;
+ left: 90px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+}
+.menu-toggle {
+    display: block;
+}
+.menu-toggle input:checked ~ .nav-menu {
+    display: flex;
+}
+  .footer-content {
+      flex-direction: column;
+  }
+
+  .left-side, .right-side {
+      margin-bottom: 10px;
+  }
+}
 
   
